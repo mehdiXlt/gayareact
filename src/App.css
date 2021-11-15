@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+/* variable */
+:root{
+
+  --hue-color:9;
+  
+  --first-color:  hsl(var(--hue-color), 88%, 52%);
+  --secound-color:  hsl(var(--hue-color), 100%, 24%);
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* ================== */
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ================= */
+nav{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 100%;
+ height: 10vh;
+ background-color: #000000;
+ position: fixed;
+ top: 0;
+}
+
+.nav__list{
+  display: flex;
+  align-items: center;
+}
+.nav__list li{
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.nav__list li a{
+  padding: .2rem;
+  border-radius: .1rem;
+  translate: .5s;
+}
+
+.nav__list li a:hover{
+  background-color: var(--first-color);
+}
+
+/* ====== home ============ */
+.home{
+  background-image: url(./components/asset/gaya_theme.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home__content{
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__aline{
+  display: flex;
+  align-items: center;
+  transform: translateX(-8rem);
+}
+.home__line{
+  background-color: var(--first-color);
+  width: 50px;
+  height: 2px;
+  margin-right: 1rem;
+}
+
+.home__title{
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.home__buttons{
+  transform:translateX(-9rem);
+  margin-top: 4rem;
+}
+.home__button{
+  background-color: var(--first-color);
+  padding: 4px 10px;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.home__button:hover{
+  background-color: var(--secound-color);
+}
+
+.test{
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.test__content{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.test__image img{
+  width: 250px;
+}
+.test__data{
+  width: 35%;
+}
+
+.test__title{
+  font-size: 2.5rem;
+}
+
+.test__description{
+  font-size: .8rem;
+}
+
+.test__footer ul{
+  display: flex;
+}
+
+.test__footer ul li{
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 5px 15px;
+  background-color: rgb(22, 22, 22);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.test__footer ul li:hover{
+  background-color:rgb(27, 27, 27) ;
+}
+
+/* ================portfolio========= */
+.portfolio{
+  background-color: rgb(20, 20, 20);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.portfolio__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.portfolio__data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 4rem;
 }
+ .portfolio__title{
+   margin-bottom: 1.5rem;
+ }
+
+ .portfolioimg__container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+ }
+
+ .portfolio__img{
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+ }
+ .portfolio__grid img{
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+ }
+
+ .portfolio__card{
+   background-color: #1b1b1b;
+   display: flex;
+   align-items: center;
+   padding: 20px 40px;
+   margin-bottom: 4rem;
+ }
+
+ .card__img{
+   margin-right: 35px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+
+ .card__data{
+   height: 40vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+ }
+
+ .card__title{
+   font-size: 1rem;
+ }
+
+ .card__subtitle{
+   font-size: 0.7rem;
+ }
+
+ .project{
+   background-image: url(./components/asset/wave.gif);
+   background-size: cover;
+   height: 80vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .project__container{
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .project__title{
+   font-size: 3rem;
+   text-align: center;
+ }
+
+ .project__subtitle{
+   width: 60%;
+   margin-top: 2rem;
+   margin-bottom: 4rem;
+ }
